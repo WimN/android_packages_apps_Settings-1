@@ -59,4 +59,7 @@
 
     <!-- Personal Dictionary Add Icon -->
     <drawable name="ic_menu_add_word">@drawable/ic_menu_add_dark</drawable>
+
+    <!-- Gesture Anywhere -->
+    <color name="ga_gesture_color">#FF07998B</color>
 </resources>

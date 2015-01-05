@@ -2327,5 +2327,9 @@
             </intent-filter>
         </activity>
 
+        <!-- Gesture anywhere -->
+        <activity android:name=".validus.gestureanywhere.GestureAnywhereBuilderActivity" />
+        <activity android:name=".validus.gestureanywhere.GestureAnywhereCreateGestureActivity" />
+
     </application>
 </manifest>
