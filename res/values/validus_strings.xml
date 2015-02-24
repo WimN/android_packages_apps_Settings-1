@@ -71,4 +71,8 @@
     <string name="changelog_validus_title">Changelog</string>
     <string name="changelog_validus_error">Unable to load changelog</string>
 	
+    <!-- Statusbar AICP logo -->
+    <string name="status_bar_validus_logo_title">Validus logo</string>
+    <string name="status_bar_validus_logo_summary">Enable to show Validus logo on the left side of statusbar</string>
+
 </resources>
