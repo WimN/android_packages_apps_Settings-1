@@ -58,5 +58,4 @@
                     android:layout_height="wrap_content"
                     android:layout_toLeftOf="@id/seekBarPrefUnitsLeft" />
     </RelativeLayout>
-
 </RelativeLayout>
