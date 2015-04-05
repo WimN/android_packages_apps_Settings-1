@@ -5,4 +5,8 @@
     <string name="header_category_thevoid">Excision</string>
     <string name="thevoid_settings_title">The Void</string>
     <string name="keywords_validus">Embrace the Darkness</string>
+
+    <!-- Navigation bar button color -->
+    <string name="navbar_button_tint_title">Navigation button tint</string>
+
 </resources>
