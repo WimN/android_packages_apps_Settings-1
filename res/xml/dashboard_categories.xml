@@ -124,30 +124,7 @@
                 android:icon="@drawable/ic_the_void_settings"
                 />
     
-    </dashboard-category>
-
-    <!-- DEVICE -->
-    <dashboard-category
-            android:id="@+id/device_section"
-            android:title="@string/header_category_device" >
-
-        <!-- Sound -->
-        <dashboard-tile
-                android:id="@+id/sound_settings"
-                android:title="@string/category_sounds"
-                android:fragment="com.android.settings.SoundSettings"
-                android:icon="@drawable/ic_settings_notifications"
-                />
-
-        <!-- Display & lights -->
-        <dashboard-tile
-                android:id="@+id/display_and_lights_settings"
-                android:title="@string/display_and_lights"
-                android:fragment="com.android.settings.DisplaySettings"
-                android:icon="@drawable/ic_settings_display"
-                />
-
-        <!-- Themes -->
+       <!-- Themes -->
         <!-- NOTE: Intent.parseIntent looks for "categories" tag and not "category" -->
         <dashboard-tile
                 android:id="@+id/theme_settings"
@@ -159,73 +136,13 @@
             </intent>
         </dashboard-tile>
 
-        <!-- Notification manager -->
+        <!-- Performance -->
         <dashboard-tile
-                android:id="@+id/notification_manager"
-                android:title="@string/notification_manager"
-                android:fragment="com.android.settings.notification.NotificationManagerSettings"
-                android:icon="@drawable/ic_settings_notifications"
-                />
-
-        <!-- Lock screen -->
-        <dashboard-tile
-                android:id="@+id/lockscreen_settings"
-                android:title="@string/lockscreen_settings"
-                android:fragment="com.android.settings.lockscreen.LockScreenSettings"
-                android:icon="@drawable/ic_settings_security"
-                />
-
-        <!-- Buttons -->
-        <dashboard-tile
-                android:id="@+id/button_settings"
-                android:title="@string/button_pref_title"
-                android:fragment="com.android.settings.ButtonSettings"
-                android:icon="@drawable/ic_settings_buttons"
-                />
-
-        <!-- O-Click -->
-        <dashboard-tile
-                android:id="@+id/oclick"
-                android:icon="@drawable/ic_settings_oclick">
-            <intent
-                    android:action="com.cyanogenmod.action.LAUNCH_BLUETOOTH_INPUT_SETTINGS"
-                    android:targetPackage="com.cyanogenmod.settings.device"
-                    android:targetClass="com.cyanogenmod.settings.device.BluetoothInputSettings" />
-        </dashboard-tile>
-
-        <!-- Gestures -->
-        <dashboard-tile
-                android:id="@+id/device_specific_gesture_settings"
-                android:title="@string/gesture_settings_title"
-                android:icon="@drawable/ic_settings_gestures">
-            <intent
-                    android:action="com.cyanogenmod.action.LAUNCH_TOUCHSCREEN_GESTURE_SETTINGS"
-                    android:targetPackage="com.cyanogenmod.settings.device"
-                    android:targetClass="com.cyanogenmod.settings.device.TouchscreenGestureSettings" />
-        </dashboard-tile>
-
-        <!-- Battery -->
-        <dashboard-tile
-                android:id="@+id/battery_settings"
-                android:title="@string/power_usage_summary_title"
-                android:fragment="com.android.settings.fuelgauge.PowerUsageSummary"
-                android:icon="@drawable/ic_settings_battery"
-                />
-
-        <!-- Security -->
-        <dashboard-tile
-                android:id="@+id/security_settings"
-                android:title="@string/security_settings_title"
-                android:fragment="com.android.settings.SecuritySettings"
-                android:icon="@drawable/ic_settings_security"
-                />
-
-        <!-- Manage users -->
-        <dashboard-tile
-                android:id="@+id/user_settings"
-                android:title="@string/user_settings_title"
-                android:fragment="com.android.settings.users.UserSettings"
-                android:icon="@drawable/ic_settings_multiuser"
+                android:id="@+id/performance_settings"
+                android:title="@string/performance_settings_title"
+                android:fragment="com.android.settings.cyanogenmod.PerformanceSettings"
+                android:icon="@drawable/ic_settings_performance"
+                settings:advanced="true"
                 />
 
     </dashboard-category>
@@ -249,24 +166,6 @@
                 android:fragment="com.android.settings.profiles.ProfilesSettings"
                 android:title="@string/profiles_settings_title"
                 android:icon="@drawable/ic_settings_profiles"
-                />
-
-        <!-- Status bar -->
-        <dashboard-tile
-                android:id="@+id/status_bar_settings"
-                android:title="@string/status_bar_title"
-                android:fragment="com.android.settings.cyanogenmod.StatusBarSettings"
-                android:icon="@drawable/ic_settings_extdesk_hidenavbar"
-                settings:advanced="true"
-                />
-
-        <!-- Notification drawer -->
-        <dashboard-tile
-                android:id="@+id/notification_drawer_settings"
-                android:title="@string/notification_drawer_title"
-                android:fragment="com.android.settings.cyanogenmod.NotificationDrawerSettings"
-                android:icon="@drawable/ic_settings_notification_drawer"
-                settings:advanced="true"
                 />
 
         <!-- Application Settings -->
@@ -300,6 +199,48 @@
                 android:title="@string/location_settings_title"
                 android:fragment="com.android.settings.location.LocationSettings"
                 android:icon="@drawable/ic_settings_location"
+                />
+
+    </dashboard-category>
+
+
+    <!-- DEVICE -->
+    <dashboard-category
+            android:id="@+id/device_section"
+            android:title="@string/header_category_device" >
+
+        <!-- O-Click -->
+        <dashboard-tile
+                android:id="@+id/oclick"
+                android:icon="@drawable/ic_settings_oclick">
+            <intent
+                    android:action="com.cyanogenmod.action.LAUNCH_BLUETOOTH_INPUT_SETTINGS"
+                    android:targetPackage="com.cyanogenmod.settings.device"
+                    android:targetClass="com.cyanogenmod.settings.device.BluetoothInputSettings" />
+        </dashboard-tile>
+
+        <!-- Battery -->
+        <dashboard-tile
+                android:id="@+id/battery_settings"
+                android:title="@string/power_usage_summary_title"
+                android:fragment="com.android.settings.fuelgauge.PowerUsageSummary"
+                android:icon="@drawable/ic_settings_battery"
+                />
+
+        <!-- Security -->
+        <dashboard-tile
+                android:id="@+id/security_settings"
+                android:title="@string/security_settings_title"
+                android:fragment="com.android.settings.SecuritySettings"
+                android:icon="@drawable/ic_settings_security"
+                />
+
+        <!-- Manage users -->
+        <dashboard-tile
+                android:id="@+id/user_settings"
+                android:title="@string/user_settings_title"
+                android:fragment="com.android.settings.users.UserSettings"
+                android:icon="@drawable/ic_settings_multiuser"
                 />
 
     </dashboard-category>
@@ -355,15 +296,6 @@
                 android:title="@string/print_settings"
                 android:fragment="com.android.settings.print.PrintSettingsFragment"
                 android:icon="@drawable/ic_settings_print"
-                />
-
-        <!-- Performance -->
-        <dashboard-tile
-                android:id="@+id/performance_settings"
-                android:title="@string/performance_settings_title"
-                android:fragment="com.android.settings.cyanogenmod.PerformanceSettings"
-                android:icon="@drawable/ic_settings_performance"
-                settings:advanced="true"
                 />
 
         <!-- Development -->
