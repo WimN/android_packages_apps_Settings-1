@@ -183,6 +183,8 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
 
     private static final int RESULT_DEBUG_APP = 1000;
 
+    private static final String HEADS_UP_TICKER_EXP_KEY = "heads_up_ticker_exp";
+
     private static final String PERSISTENT_DATA_BLOCK_PROP = "ro.frp.pst";
 
     private static final int REQUEST_CODE_ENABLE_OEM_UNLOCK = 0;
@@ -269,6 +271,8 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
 
     private SwitchPreference mDevelopmentShortcut;
 
+    private SwitchPreference mHeadsUpTicker;
+
     private final ArrayList<Preference> mAllPrefs = new ArrayList<Preference>();
 
     private final ArrayList<SwitchPreference> mResetSwitchPrefs
@@ -345,7 +349,7 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
         mAdvancedReboot = findAndInitSwitchPref(ADVANCED_REBOOT_KEY);
         mUpdateRecovery = findAndInitSwitchPref(UPDATE_RECOVERY_KEY);
         mDevelopmentShortcut = findAndInitSwitchPref(DEVELOPMENT_SHORTCUT_KEY);
-
+        mHeadsUpTicker = findAndInitSwitchPref(HEADS_UP_TICKER_EXP_KEY);
 
         if (!android.os.Process.myUserHandle().equals(UserHandle.OWNER)) {
             disableForUser(mEnableAdb);
@@ -355,6 +359,7 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
             disableForUser(mAdvancedReboot);
             disableForUser(mUpdateRecovery);
             disableForUser(mDevelopmentShortcut);
+            disableForUser(mHeadsUpTicker);
             disableForUser(mQuickBoot);
         }
 
@@ -639,6 +644,7 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
         updateAdvancedRebootOptions();
         updateDevelopmentShortcutOptions();
         updateUpdateRecoveryOptions();
+        updateHeadsUpTickerOptions();
     }
 
     private void writeAdvancedRebootOptions() {
@@ -666,6 +672,22 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
     private void updateDevelopmentShortcutOptions() {
         mDevelopmentShortcut.setChecked(Settings.Secure.getInt(getActivity().getContentResolver(),
                 Settings.Secure.DEVELOPMENT_SHORTCUT, 0) != 0);
+    }
+    
+    private void resetHeadsUpTickerOptions() {
+        Settings.System.putInt(getActivity().getContentResolver(),
+                Settings.System.HEADS_UP_TICKER_ENABLED, 0);
+    }
+
+    private void writeHeadsUpTickerOptions() {
+        Settings.System.putInt(getActivity().getContentResolver(),
+                Settings.System.HEADS_UP_TICKER_ENABLED,
+                mHeadsUpTicker.isChecked() ? 1 : 0);
+    }
+
+    private void updateHeadsUpTickerOptions() {
+        mHeadsUpTicker.setChecked(Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.HEADS_UP_TICKER_ENABLED, 0) != 0);
     }
 
     private void updateAdbOverNetwork() {
@@ -711,6 +733,7 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
         resetAdbNotifyOptions();
         resetVerifyAppsOverUsbOptions();
         resetDevelopmentShortcutOptions();
+        resetHeadsUpTickerOptions();
         resetUpdateRecoveryOptions();
         writeAnimationScaleOption(0, mWindowAnimationScale, null);
         writeAnimationScaleOption(1, mTransitionAnimationScale, null);
@@ -1725,6 +1748,8 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
             writeAdvancedRebootOptions();
         } else if (preference == mDevelopmentShortcut) {
             writeDevelopmentShortcutOptions();
+        } else if (preference == mHeadsUpTicker) {
+            writeHeadsUpTickerOptions();
         } else if (preference == mKillAppLongpressBack) {
             writeKillAppLongpressBackOptions();
         } else if (preference == mUpdateRecovery) {
