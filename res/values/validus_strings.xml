@@ -59,4 +59,8 @@
     <!-- Heads-up ticker enabled setting, experimental. -->
     <string name="heads_up_ticker_exp_title">Enable heads-up ticker check</string>
     <string name="heads_up_ticker_exp_summary">When a notification is not noisy check if ticker is not null and show it. Grouped notifications are still half-broken, see hangouts.</string>
+
++    <!-- Superuser indicator-->
++    <string name="su_indicator">Superuser indicator</string>
++    <string name="su_indicator_summary">Show superuser indicator when a session is active</string>
 </resources>
