@@ -46,12 +46,6 @@
 		android:title="@string/lock_screen_weather_settings_title"
 		android:summary="@string/lock_screen_weather_settings_summary"
 		android:fragment="com.android.settings.validus.LockScreenWeatherSettings" />
- 
-	<PreferenceScreen
-		android:key="lock_screen_color_settings"
-		android:title="@string/colors_title"
-		android:summary="@string/lock_screen_color_settings_summary"
-		android:fragment="com.android.settings.validus.LockScreenColorSettings" />
 			
         <com.android.settings.cyanogenmod.SecureSettingSwitchPreference
             android:key="lockscreen_visualizer"
