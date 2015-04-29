@@ -68,4 +68,10 @@
                 android:fragment="com.android.settings.notification.NotificationManagerSettings"
                 />
 
+    <!-- Recent panel settings -->
+    <PreferenceScreen
+         android:key="recents_panel"
+         android:fragment="com.android.settings.validus.RecentsPanelSettings"
+         android:title="@string/recents_panel_title"/>
+				
 </PreferenceScreen>
