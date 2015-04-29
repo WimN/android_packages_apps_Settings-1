@@ -23,6 +23,15 @@
         android:summary="@string/disable_navkeys_summary"
         android:defaultValue="false" />
 
+        <ListPreference
+            android:key="navigation_bar_height"
+            android:dialogTitle="@string/navigation_bar_height"
+            android:title="@string/navigation_bar_height"
+            android:entries="@array/navigation_bar_height_entries"
+            android:entryValues="@array/navigation_bar_height_values"
+            android:defaultValue="48"
+            android:persistent="false" />		
+		
     <com.android.settings.cyanogenmod.ButtonBacklightBrightness
         android:key="button_backlight"
         android:title="@string/button_backlight_title"
