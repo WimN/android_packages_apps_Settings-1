@@ -143,10 +143,6 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
     private ListPreference mNavigationBarHeight;		
 
     private Handler mHandler;
-	
-	// navigation bar height
-	private static final String NAVIGATION_BAR_HEIGHT = "navigation_bar_height";
- 			
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -172,6 +168,9 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
         // Navigation bar left
         mNavigationBarLeftPref = (SwitchPreference) findPreference(KEY_NAVIGATION_BAR_LEFT);
 
+		// navigation bar height
+		private static final String NAVIGATION_BAR_HEIGHT = "navigation_bar_height";
+ 		
         // Navigation bar button color
         mNavbarButtonTint = (ColorPickerPreference) findPreference(NAVIGATION_BAR_TINT);
         mNavbarButtonTint.setOnPreferenceChangeListener(this);
