@@ -15,6 +15,9 @@
     <string name="dlg_reset_values_message">Reset values to\nAndroid- or Validus default?</string>
     <string name="dlg_reset_android">Android</string>
     <string name="dlg_reset_bliss">Validus</string>	
+	
+    <!-- SuperSU -->
+    <string name="supersu_title">SuperSU</string>
 
     <!-- The Void  -->
     <string name="header_category_thevoid">Excision</string>
