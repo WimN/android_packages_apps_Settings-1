@@ -149,6 +149,10 @@ public class QSTileHolder {
                 resourceName = "ic_qs_usb_tether_on";
                 stringId = R.string.qs_tile_usb_tether;
                 break;
+            case QSConstants.TILE_SCREENRECORD:
+                resourceName = "ic_qs_screenrecord";
+                stringId = R.string.qs_tile_screenrecord;
+                break;				
             case QSConstants.TILE_SCREENSHOT:
                 resourceName = "ic_qs_screenshot";
                 stringId = R.string.qs_screenshot_tile;
@@ -165,6 +169,10 @@ public class QSTileHolder {
                 resourceName = "ic_qs_ambientdisplay_on";
                 stringId = R.string.qs_ambient_display;
                 break;
+            case QSConstants.TILE_APPCIRCLEBAR:
+                resourceName = "ic_qs_appcirclebar_on";
+                stringId = R.string.qs_tile_appcirclebar;
+                break;				
             default:
                 return null;
         }
