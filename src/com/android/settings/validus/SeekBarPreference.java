@@ -1,4 +1,4 @@
-package com.android.settings.tesla;
+package com.android.settings.validus;
 
 import android.content.Context;
 import android.content.res.TypedArray;

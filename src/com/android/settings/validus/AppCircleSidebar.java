@@ -17,7 +17,7 @@
  *
  */
 
-package com.android.settings.tesla;
+package com.android.settings.validus;
 
 import android.app.ActivityManagerNative;
 import android.app.AlertDialog;
@@ -39,7 +39,7 @@ import android.text.TextUtils;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
-import com.android.settings.tesla.SeekBarPreference;
+import com.android.settings.validus.SeekBarPreference;
 import com.android.settings.util.AppMultiSelectListPreference;
 import com.android.internal.util.terminus.DeviceUtils;
 
