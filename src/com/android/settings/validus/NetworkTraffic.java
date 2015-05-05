@@ -14,7 +14,7 @@
 * limitations under the License.
 */
 
-package com.android.settings.crdroid;
+package com.android.settings.validus;
 
 import android.content.ContentResolver;
 import android.content.res.Resources;
@@ -31,7 +31,7 @@ import android.util.Log;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
-import com.android.settings.crdroid.SeekBarPreference;
+import com.android.settings.validus.SeekBarPreference;
 
 public class NetworkTraffic extends SettingsPreferenceFragment
     implements OnPreferenceChangeListener {
