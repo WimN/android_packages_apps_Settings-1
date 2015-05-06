@@ -33,11 +33,6 @@
     <PreferenceCategory
         android:key="navigation_bar_category"
         android:title="@string/navigation_bar_category" >
-		
-        <PreferenceScreen
-            android:key="navbar_dimensions"
-            android:fragment="com.android.settings.validus.NavBarDimensions"
-            android:title="@string/navbar_style_dimen_title" />
 
         <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
             android:key="navigation_bar_left"
