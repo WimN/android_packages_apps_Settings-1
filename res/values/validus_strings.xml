@@ -63,6 +63,21 @@
     <string name="heads_up_ticker_exp_title">Enable heads-up ticker check</string>
     <string name="heads_up_ticker_exp_summary">When a notification is not noisy check if ticker is not null and show it. Grouped notifications are still half-broken, see hangouts.</string>
 
+    <!-- Heads up timeout -->
+    <string name="heads_up_time_out_title">Time out</string>
+    <string name="heads_up_time_out_summary">Notification will show for <xliff:g id="number">%d</xliff:g> seconds</string>
+    <string name="heads_up_time_out_never_summary">Notification will show until it is dismissed</string>
+    <string name="heads_up_time_out_2sec">2 seconds</string>
+    <string name="heads_up_time_out_3sec">3 seconds</string>
+    <string name="heads_up_time_out_4sec">4 seconds</string>
+    <string name="heads_up_time_out_5sec">5 seconds</string>
+    <string name="heads_up_time_out_6sec">6 seconds</string>
+    <string name="heads_up_time_out_7sec">7 seconds</string>
+    <string name="heads_up_time_out_8sec">8 seconds</string>
+    <string name="heads_up_time_out_9sec">9 seconds</string>
+    <string name="heads_up_time_out_10sec">10 seconds</string>
+    <string name="heads_up_time_out_never">Never</string>
+
     <!-- Superuser indicator-->
     <string name="su_indicator">Superuser indicator</string>
     <string name="su_indicator_summary">Show superuser indicator when a session is active</string>

@@ -99,7 +99,7 @@
         <item>5</item>
     </string-array>
 	
-<!-- Heads up timeout -->
+    <!-- Heads up timeout -->
     <string-array name="heads_up_time_out_entries">
         <item>@string/heads_up_time_out_never</item>
         <item>@string/heads_up_time_out_2sec</item>
