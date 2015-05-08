@@ -32,20 +32,20 @@
                 android:title="@string/lockscreen_settings"
                 android:fragment="com.android.settings.lockscreen.LockScreenSettings"
                 />
-				
-    <!-- Lock Colors --> 
-	<PreferenceScreen
-		android:key="lock_screen_color_settings"
-		android:title="@string/colors_title"
-		android:summary="@string/lock_screen_color_settings_summary"
-		android:fragment="com.android.settings.validus.LockScreenColorSettings" />	
-				
+
 	<!-- Lockscreen Weather -->
     <PreferenceScreen
 		android:key="lock_screen_weather_settings"
 		android:title="@string/lock_screen_weather_settings_title"
 		android:fragment="com.android.settings.validus.LockScreenWeatherSettings"
-		/>		
+		/>
+			
+    <!-- Lock Colors --> 
+	<PreferenceScreen
+		android:key="lock_screen_color_settings"
+		android:title="@string/colors_title"
+		android:summary="@string/lock_screen_color_settings_summary"
+		android:fragment="com.android.settings.validus.LockScreenColorSettings" />			
 			
         <!-- Buttons -->
     <PreferenceScreen
