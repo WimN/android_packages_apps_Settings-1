@@ -54,6 +54,7 @@
         android:dependency="gesture_anywhere_enabled" />
 
     <com.android.settings.validus.utils.SeekBarPreferenceCham
+	android:key="gesture_anywhere_trigger_top"
         android:title="@string/trigger_top_title"
         android:summary="@string/trigger_top_summary"
         android:defaultValue="0"
