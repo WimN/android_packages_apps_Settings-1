@@ -64,8 +64,7 @@
         <PreferenceScreen
                 android:id="@+id/gesture_anywhere"
                 android:title="@string/gesture_anywhere_title"
-                android:fragment="com.android.settings.validus.gestureanywhere.GestureAnywhereSettings"
-                android:icon="@drawable/ic_settings_gestures" />
+                android:fragment="com.android.settings.validus.gestureanywhere.GestureAnywhereSettings" />
 
 	<!-- Recent panel settings -->
 	<PreferenceScreen
