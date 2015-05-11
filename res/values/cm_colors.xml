@@ -62,4 +62,10 @@
 
     <!-- Gesture Anywhere -->
     <color name="ga_gesture_color">#FF07998B</color>
+    
+    <!-- Multi-sim Color Picker Text Color -->
+    <color name="msim_color_picker_text_color">@android:color/black</color>
+
+    <!-- Multi-sim Edit Name Text Color -->
+    <color name="msim_edit_name_text_color">@android:color/black</color>
 </resources>
